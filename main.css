@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Inconsolata');
+
+
+* {
+    box-sizing: border-box;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color:black;
+}
+
+.box {
+    height: 20px;
+    position: relative;
+    width: 20px;
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.title {
+    color: #fafafa;
+    font-size: 2em;
+    text-align: center;
+    margin: 20px auto 0 auto;
+}
+
+.title:after {
+    content: "";
+    position: absolute;
+    margin: 1px;
+    /* top: 0; */
+    /* right: -15px; */
+    /* Remove display: inline-block if not required to be on the same line as text etc */
+    display: inline-block;
+    background-color: #a5a5a5;
+    vertical-align: top;
+    width: 10px;
+    /* Set height to the line height of .text */
+    height: 24px;
+    /* 
+    Animation paramaters:
+    blink = animation-name, 
+    1s = animation-duration, 
+    step-end = animation-timing-function,
+    infinite = animation-iteration-count
+    */
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.startup-name {
+    font-size: 1.5rem;
+}
+
+.selected-description {
+    height: 0px;
+    color: #fafafa;
+    text-align: justify;
+    padding-left: 13%;
+    display: grid;
+}
+
+.selected-descriptionr2 {
+    height: 0px;
+    color: #fafafa;
+    text-align: justify;
+    padding-left: 33%;
+    display: grid;
+}
+
+.selected-descriptionr3{
+    height: 0px;
+    color: #fafafa;
+    text-align: justify;
+    padding-left: 50%;
+    display: grid;  
+}
+
+.selected-descriptionr4{
+    height: 0px;
+    color: #fafafa;
+    text-align: justify;
+    display: grid;  
+    position: absolute;
+    top:40px;
+    left:30%;
+}
+
+
+.selected-descriptionV{
+    height: 10px;
+    color: #fafafa;
+    text-align: justify;
+    display: block;
+    overflow: auto;
+}
+
+body {
+    font-family: 'Inconsolata',
+    'Open Sans',
+    'Verdana';
+    margin: 2vw;
+    background: #000000;
+    color: #000;
+    counter-reset: element;
+}
+
+.periodic-table {
+    display: grid;
+    grid-column-gap: .5vw;
+    grid-row-gap: .5vw;
+    padding-left: 0;
+}
+
+.periodic-table>li {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 4.5vw;
+    border-radius: 3px;
+    background: rgb(91, 194, 234);
+    font-weight: bold;
+}
+
+.periodic-table>li:before {
+    counter-increment: element;
+    content: counter(element);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: 1.2vw;
+    font-weight: lighter;
+}
+
+.periodic-table>li a {
+    font-size: 2vw;
+}
+
+#helium {
+    grid-column-start: 18;
+}
+
+#boron,
+#aluminium {
+    grid-column-start: 13;
+}
+
+#cerium,
+#thorium {
+    grid-column-start: 4;
+}
+
+.periodic-table>li:nth-child(n+58):nth-last-child(n+48) {
+    grid-row-start: 8;
+}
+
+.periodic-table>li:nth-child(n+90):nth-last-child(n+16) {
+    grid-row-start: 9;
+}
+
+.periodic-table:before {
+    display: block;
+    content: '';
+    grid-row: 8 / 10;
+    grid-column: 1 / 4;
+}
+
+.green{                 /*otros no metales hidrogeno*/
+    background-color: rgb(101, 193, 139);
+}
+.periodic-table .othernonmetals {
+    background: rgb(101, 193, 139);
+}
+
+.lila{                 /*Alcalinos*/
+     background:rgb(194, 150, 196)
+}
+
+.periodic-table .alcalinos{
+     background:rgb(194, 150, 196)
+}
+
+.rosa{                 /*Alcalinoterreos*/
+    background: rgb(232, 150, 193);
+}
+
+.periodic-table .alcalinoterreos{
+    background: rgb(232, 150, 193);
+}
+
+.azul-noble{        /*Gases Nobles*/
+    background:rgb(129, 195, 235);
+}
+
+.periodic-table .gas-noble {
+    background:rgb(129, 195, 235);
+}
+
+.azul-claro{    /*Halogenos*/
+    background:rgb(113, 187, 183);
+}
+
+.periodic-table .halogenos{
+    background:rgb(113, 187, 183);
+}
+
+.verde-limon{   /*Metaloides*/
+    background:rgb(203, 220, 92);
+}
+
+.periodic-table .metaloides{
+    background:rgb(203, 220, 92);
+}
+
+.amarillo{      /*Otros metales*/
+    background:rgb(255, 215, 44);
+}
+
+.periodic-table .otros-metales{
+    background:	rgb(255, 215, 44);
+}
+
+.naranja{       /*Lantánidos*/
+    background:rgb(247, 151, 90);
+}
+
+.periodic-table .lantanidos{
+    background:rgb(247, 151, 90);
+    }
+
+.pistache{  /*Actínidos*/
+    background:rgb(244, 141, 126);
+}
+
+.periodic-table .actinidos{
+    background:rgb(244, 141, 126);
+}
+
+.mandarina{
+    background:rgb(252, 181, 76);
+}
+
+.periodic-table .metales-trans{
+    background:rgb(252, 181, 76);
+}
+
+@media all and (max-width: 650px) {
+
+    #helium,
+    #boron,
+    #aluminium,
+    #cerium,
+    #thorium {
+        grid-column-start: auto;
+    }
+
+    .periodic-table {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .periodic-table>li a {
+        font-size: 0;
+    }
+
+    .periodic-table>li {
+        padding: 1rem;
+    }
+
+    .periodic-table>li a:after {
+        content: attr(title);
+        font-size: 2rem;
+    }
+
+    .periodic-table>li:before {
+        font-size: 1rem;
+    }
+
+    .periodic-table>li:nth-child(n+58):nth-last-child(n+48) {
+        grid-row-start: auto !important;
+    }
+
+    .periodic-table>li:nth-child(n+90):nth-last-child(n+16) {
+        grid-row-start: auto !important;
+    }
+
+    .periodic-table:before {
+        display: none !important;
+    }
+}
+
+@media all and (max-width: 650px) {
+    body {
+        margin: 2vw;
+    }
+
+    .periodic-table {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .periodic-table>li {
+        height: auto;
+        font-size: 3vw;
+    }
+
+}
+
+@media all and (max-width: 650px) {
+    .periodic-table {
+        grid-template-columns: 1fr;
+    }
+    .selected-descriptionV {
+        margin-bottom: 0px;
+        grid-column: 1;
+        height: 60px;
+        text-align: center;
+    }
+    .selected-description{
+        display: none;
+    }
+    .selected-descriptionr2{
+        display:none;
+    }
+    .selected-descriptionr3{
+        display:none;
+    }
+    .selected-descriptionr4{
+        display:none;
+    }
+}

@@ -10,6 +10,15 @@ a:link, a:visited, a:active {
     color:black;
 }
 
+.a2{
+
+}
+
+.a2:link, .a2:visited, .a2:active {
+    text-decoration:none;
+    color:white;
+}
+
 .box {
     height: 20px;
     position: relative;
@@ -303,10 +312,7 @@ body {
                                   supported by Chrome and Opera */
 }
 
-.state-filter:active {
-    box-shadow: 0 .5px rgb(231, 231, 231);
-    transform: translateY(4px);
-}
+
 
 .shooting-unicorns {
     background-color: rgba(204,62,68, .5);

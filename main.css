@@ -340,6 +340,7 @@ body {
 
     .periodic-table {
         grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 50px;
     }
 
     .periodic-table>li a {

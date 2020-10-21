@@ -186,8 +186,8 @@ img{
     width: 300px;
   }
   .margen{
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
   
 }
@@ -198,7 +198,7 @@ img{
     margin-right: auto;
   }
   .margen{
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 }

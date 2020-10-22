@@ -328,7 +328,7 @@ body {
     border: 2px solid rgb(25,145,231);
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 550px) {
 
     #helium,
     #boron,
@@ -382,7 +382,7 @@ body {
     }
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 550px) {
     body {
         margin: 2vw;
     }
@@ -398,7 +398,7 @@ body {
 
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 550px) {
     .periodic-table {
         grid-template-columns: 1fr;
     }
